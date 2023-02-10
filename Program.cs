@@ -7,6 +7,7 @@
             System.Console.WriteLine("Welcome to the Snake and Ladder Game");
 
             int position = 0;
+            int numberOfTimesDiceRolled = 0;
 
             Console.WriteLine("Welcome Player 1, Let's start the Game");
             Console.WriteLine("Player 1 is at position : " + position);
@@ -18,8 +19,10 @@
                 int temp = position;
 
                 int dice = random.Next(1, 7);
+                numberOfTimesDiceRolled++;
 
                 Console.WriteLine($"The Player rolls a dice and gets: {dice}");
+                Console.WriteLine($"Number of Times Dice rolled is: {numberOfTimesDiceRolled}");
 
                 int option = random.Next(0, 3);
 
@@ -50,6 +53,8 @@
 
             }
             Console.WriteLine("Player is at Position : {0}", position);
+            Console.WriteLine($"Total Number of Times Dice rolled is: {numberOfTimesDiceRolled}");
+
 
         }
     }
